@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dharanika | AI-Powered Organic Farming</title>
+
+  <meta name="description" content="Dharanika is an AI-powered organic farming platform helping farmers with crop guidance, farming information and smart agricultural solutions.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4fff6;
+      color: #173b20;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #16833a;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #173b20;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      padding: 70px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #16833a;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      color: #49634e;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      padding: 15px 22px;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .primary {
+      background: #16833a;
+      color: white;
+    }
+
+    .secondary {
+      background: #dff5e4;
+      color: #12672e;
+    }
+
+    .voice-box {
+      background: white;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      box-shadow: 0 15px 40px rgba(22,131,58,0.18);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .mic {
+      font-size: 65px;
+      margin-bottom: 15px;
+    }
+
+    .voice-box h3 {
+      margin-bottom: 8px;
+    }
+
+    .voice-box p {
+      font-size: 13px;
+      color: #607463;
+      padding: 0 30px;
+    }
+
+    .features {
+      padding: 60px 7%;
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #607463;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #f4fff6;
+      padding: 25px 18px;
+      border-radius: 18px;
+      text-align: center;
+      border: 1px solid #dcefe0;
+    }
+
+    .card .icon {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #607463;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #12351c;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .voice-box {
+        width: 220px;
+        height: 220px;
+      }
+
+      .mic {
+        font-size: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">🌿 Dharanika</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <h1>
+        Grow Naturally.<br>
+        <span>Farm Smarter.</span>
+      </h1>
+
+      <p>
+        Dharanika is an AI-powered organic farming platform
+        designed to make smart farming guidance simple and
+        accessible for every farmer.
+      </p>
+
+      <div class="buttons">
+        <a href="#features" class="btn primary">
+          🌾 Explore Dharanika
+        </a>
+
+        <button class="btn secondary" onclick="startVoice()">
+          🎙️ మాట్లాడండి / Talk
+        </button>
+      </div>
+
+    </div>
+
+    <div class="voice-box">
+
+      <div class="mic">🎙️</div>
+
+      <h3>Voice Assistant</h3>
+
+      <p>
+        Ask your farming questions using your voice.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="features" id="features">
+
+    <div class="section-title">
+      <h2>🌱 What can Dharanika do?</h2>
+
+      <p>
+        Simple tools for smarter and sustainable farming.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>AI Crop Doctor</h3>
+        <p>
+          Get farming guidance for crop problems.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌾</div>
+        <h3>Crop Guide</h3>
+        <p>
+          Learn about crops, soil, seasons and organic practices.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🐛</div>
+        <h3>Pest & Disease</h3>
+        <p>
+          Understand common crop pests and diseases.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌦️</div>
+        <h3>Weather</h3>
+        <p>
+          Weather information to help plan farming activities.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>Market</h3>
+        <p>
+          Access useful crop market information.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏛️</div>
+        <h3>Government Schemes</h3>
+        <p>
+          Discover agriculture-related government schemes.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="features" id="about">
+
+    <div class="section-title">
+
+      <h2>🌿 About Dharanika</h2>
+
+      <p>
+        Our goal is to make modern farming knowledge
+        simple, accessible and farmer-friendly.
+      </p>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Dharanika | AI-Powered Organic Farming
+  </footer>
+
+  <script>
+
+    function startVoice() {
+
+      if (!('webkitSpeechRecognition' in window)) {
+
+        alert(
+          "Voice recognition is not supported in this browser. Please try Google Chrome."
+        );
+
+        return;
+      }
+
+      const recognition = new webkitSpeechRecognition();
+
+      recognition.lang = "te-IN";
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.onstart = function() {
+        alert("🎙️ మాట్లాడండి... Dharanika వింటోంది!");
+      };
+
+      recognition.onresult = function(event) {
+
+        const text = event.results[0][0].transcript;
+
+        alert("మీరు చెప్పారు:\n" + text);
+      };
+
+      recognition.onerror = function() {
+
+        alert("Voice input failed. Please try again.");
+
+      };
+
+      recognition.start();
+    }
+
+  </script>
+
+</body>
+</html>
