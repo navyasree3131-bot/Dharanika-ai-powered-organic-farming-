@@ -6,289 +6,191 @@
 
 <title>Dharanika | AI-Powered Organic Farming</title>
 
-<meta name="description" content="Dharanika is an AI-powered organic farming platform helping farmers with crop guidance, weather, pest and disease information and smart farming tools.">
+<meta name="description"
+content="Dharanika is an AI-powered organic farming platform helping farmers choose crops, manage soil, protect plants, optimize irrigation, understand markets and sell directly.">
 
 <style>
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Arial,sans-serif;
-}
-
-html{
-  scroll-behavior:smooth;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
 }
 
 body{
-  background:#f4fff6;
-  color:#173b20;
+    background:#f4fff5;
+    color:#173b20;
+    line-height:1.6;
 }
 
 header{
-  background:white;
-  padding:16px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 2px 12px rgba(0,0,0,.08);
-  position:sticky;
-  top:0;
-  z-index:100;
+    background:#0b6b35;
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 .logo{
-  font-size:25px;
-  font-weight:bold;
-  color:#16833a;
+    font-size:25px;
+    font-weight:bold;
 }
 
 nav a{
-  text-decoration:none;
-  color:#173b20;
-  margin-left:18px;
-  font-size:14px;
-}
-
-section{
-  padding:60px 7%;
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    font-weight:bold;
 }
 
 .hero{
-  min-height:75vh;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:40px;
-}
-
-.hero-text{
-  max-width:650px;
+    text-align:center;
+    padding:70px 20px;
+    background:linear-gradient(135deg,#dff8df,#ffffff);
 }
 
 .hero h1{
-  font-size:52px;
-  line-height:1.1;
-  margin-bottom:20px;
-}
-
-.hero h1 span{
-  color:#16833a;
+    font-size:42px;
+    color:#075c2d;
 }
 
 .hero p{
-  font-size:18px;
-  line-height:1.7;
-  color:#49634e;
-  margin-bottom:28px;
+    max-width:750px;
+    margin:15px auto;
+    font-size:18px;
 }
 
-.buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+.hero-buttons button{
+    margin:8px;
 }
 
-.btn{
-  border:none;
-  padding:14px 20px;
-  border-radius:12px;
-  font-size:15px;
-  cursor:pointer;
-  text-decoration:none;
-  display:inline-block;
+button{
+    border:none;
+    background:#0b7a3b;
+    color:white;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-.primary{
-  background:#16833a;
-  color:white;
-}
-
-.secondary{
-  background:#dff5e4;
-  color:#12672e;
+button:hover{
+    background:#075c2d;
 }
 
 .voice-box{
-  background:white;
-  width:280px;
-  height:280px;
-  border-radius:50%;
-  box-shadow:0 15px 40px rgba(22,131,58,.18);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  cursor:pointer;
+    margin:30px auto;
+    max-width:600px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px #0002;
 }
 
 .mic{
-  font-size:62px;
-  margin-bottom:12px;
+    font-size:45px;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    margin:15px;
 }
 
-.voice-box p{
-  font-size:13px;
-  color:#607463;
-  padding:0 30px;
-}
-
-.features{
-  background:white;
+section{
+    padding:55px 6%;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:30px;
+    text-align:center;
+    margin-bottom:30px;
 }
 
 .section-title h2{
-  font-size:30px;
-  margin-bottom:8px;
+    font-size:30px;
+    color:#075c2d;
 }
 
-.section-title p{
-  color:#607463;
-  line-height:1.6;
+.journey{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin:20px;
 }
 
-.tool{
-  margin-top:20px;
-  background:white;
-  padding:25px;
-  border-radius:18px;
-  border:1px solid #dcefe0;
-}
-
-.tool h2{
-  margin-bottom:8px;
-}
-
-.tool p{
-  color:#607463;
-  line-height:1.6;
-}
-
-select,
-input{
-  width:100%;
-  padding:12px;
-  margin:8px 0;
-  border:1px solid #cfe3d3;
-  border-radius:9px;
-  font-size:15px;
-}
-
-.action{
-  background:#16833a;
-  color:white;
-  border:none;
-  padding:12px 18px;
-  border-radius:9px;
-  cursor:pointer;
-  margin-top:8px;
-}
-
-.result{
-  margin-top:15px;
-  padding:15px;
-  background:#effaf1;
-  border-radius:10px;
-  line-height:1.7;
-}
-
-.weather-box{
-  margin-top:15px;
-  text-align:center;
-  padding:25px;
-  background:#effaf1;
-  border-radius:15px;
-  line-height:1.8;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
 }
 
 .card{
-  background:#f4fff6;
-  padding:24px 18px;
-  border-radius:18px;
-  border:1px solid #dcefe0;
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 4px 15px #0001;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
 }
 
 .card h3{
-  margin:8px 0;
+    color:#075c2d;
+    margin-bottom:10px;
 }
 
-.card p{
-  color:#607463;
-  line-height:1.5;
-  font-size:14px;
+.card button{
+    margin-top:15px;
 }
 
-.icon{
-  font-size:34px;
+.tool{
+    max-width:700px;
+    margin:20px auto;
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 4px 15px #0001;
 }
 
-.upload{
-  background:white;
-  border:2px dashed #8bc89a;
-  padding:25px;
-  text-align:center;
-  border-radius:15px;
+input,select,textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0 15px;
+    border:1px solid #bbb;
+    border-radius:8px;
 }
 
-#cropPreview{
-  max-width:100%;
-  max-height:250px;
-  margin-top:15px;
-  border-radius:12px;
-  display:none;
+.result{
+    margin-top:15px;
+    background:#ecffef;
+    padding:15px;
+    border-radius:10px;
+    display:none;
 }
 
 footer{
-  background:#12351c;
-  color:white;
-  text-align:center;
-  padding:25px;
+    background:#073d20;
+    color:white;
+    text-align:center;
+    padding:30px;
 }
 
 @media(max-width:700px){
+    .hero h1{
+        font-size:32px;
+    }
 
-  nav{
-    display:none;
-  }
+    nav{
+        display:none;
+    }
 
-  .hero{
-    flex-direction:column;
-    text-align:center;
-    padding-top:45px;
-  }
-
-  .hero h1{
-    font-size:39px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  .buttons{
-    justify-content:center;
-  }
-
-  .voice-box{
-    width:220px;
-    height:220px;
-  }
-
-  .mic{
-    font-size:50px;
-  }
+    section{
+        padding:40px 5%;
+    }
 }
 </style>
 </head>
@@ -296,297 +198,391 @@ footer{
 <body>
 
 <header>
+    <div class="logo">🌱 Dharanika</div>
 
-<div class="logo">🌿 Dharanika</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#tools">Tools</a>
-<a href="#guides">Guides</a>
-<a href="#about">About</a>
-</nav>
-
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+    </nav>
 </header>
 
 
-<section class="hero" id="home">
+<!-- HERO -->
 
-<div class="hero-text">
+<section class="hero">
 
-<h1>
-Grow Naturally.<br>
-<span>Farm Smarter.</span>
-</h1>
+    <h1>🌱 DHARANIKA</h1>
+
+    <h2>AI-Powered Organic Farming</h2>
+
+    <p>
+        Grow Naturally. Farm Smarter.
+        Your intelligent farming companion for soil, crops,
+        plant health, weather, water and markets.
+    </p>
+
+    <div class="hero-buttons">
+        <button onclick="scrollToFeatures()">Explore Features</button>
+        <button onclick="startVoice()">🎙️ Talk to Dharanika</button>
+    </div>
+
+
+    <div class="voice-box">
+
+        <h2>🎙️ Dharanika Voice Assistant</h2>
+
+        <p id="voiceStatus">
+            Telugu / English voice farming assistant
+        </p>
+
+        <button class="mic" onclick="startVoice()">🎙️</button>
+
+        <div id="voiceResult" class="result"></div>
+
+    </div>
+
+</section>
+
+
+<!-- JOURNEY -->
+
+<section>
+
+    <div class="section-title">
+        <h2>🔥 Main Dharanika Journey</h2>
+    </div>
+
+    <div class="journey">
+        🌍 Soil → 🌾 Choose Crop → 🧠 Decide →
+        🌱 Grow & Protect → 📈 Sell
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section id="features">
+
+<div class="section-title">
+
+    <h2>🌾 Dharanika Core Features</h2>
+
+    <p>
+        Intelligent tools designed for farmers
+    </p>
+
+</div>
+
+
+<div class="features">
+
+
+<!-- 1 -->
+
+<div class="card">
+
+<h3>1. 🌱 AI Personalised Crop Advisor</h3>
 
 <p>
-Dharanika is an AI-powered organic farming platform
-designed to make smart farming guidance simple and
-accessible for every farmer.
+Get suitable crop recommendations based on soil,
+season, water availability and farming conditions.
 </p>
 
-<div class="buttons">
-
-<a href="#tools" class="btn primary">
-🌾 Explore Tools
-</a>
-
-<button class="btn secondary" onclick="startVoice()">
-🎙️ మాట్లాడండి / Talk
+<button onclick="cropAdvisor()">
+Get Crop Recommendation
 </button>
 
 </div>
 
+
+<!-- 2 -->
+
+<div class="card">
+
+<h3>2. 🧠 AI Farm Decision Simulator</h3>
+
+<p>
+Explore what-if farming scenarios involving crop,
+water, budget, investment, risk and revenue.
+</p>
+
+<button onclick="decisionSimulator()">
+Run Simulation
+</button>
+
 </div>
 
 
-<div class="voice-box" onclick="startVoice()">
+<!-- 3 -->
 
-<div class="mic">🎙️</div>
+<div class="card">
 
-<h3>Voice Assistant</h3>
+<h3>3. 🌿 AI Plant Health Scanner</h3>
 
 <p>
-Telugu lo farming questions adagandi.
-Dharanika vintundi!
+Upload a plant image and get a basic plant-health
+analysis interface with possible issues and solutions.
 </p>
+
+<input type="file"
+accept="image/*"
+onchange="scanPlant(event)">
+
+<div id="plantResult"></div>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="card">
+
+<h3>4. 🌍 AI Soil Health & Organic Farming Planner</h3>
+
+<p>
+Check soil health information and receive organic
+fertilizer and crop-planning suggestions.
+</p>
+
+<button onclick="soilPlanner()">
+Check Soil Plan
+</button>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="card">
+
+<h3>5. 📈 AI Market Intelligence</h3>
+
+<p>
+Understand market trends, demand and possible
+selling-time strategies.
+</p>
+
+<button onclick="marketIntelligence()">
+View Market Insights
+</button>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="card">
+
+<h3>6. 🛒 Farmer Marketplace</h3>
+
+<p>
+A future direct farmer-to-customer marketplace
+for selling farm products.
+</p>
+
+<button onclick="marketplace()">
+Open Marketplace
+</button>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="card">
+
+<h3>7. 🤖 AI Farming Assistant</h3>
+
+<p>
+Ask farming questions using text or voice in
+local languages.
+</p>
+
+<button onclick="farmingAssistant()">
+Ask Assistant
+</button>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="card">
+
+<h3>8. 💧 AI Irrigation Optimizer</h3>
+
+<p>
+Calculate approximate water requirements and
+create a simple irrigation plan.
+</p>
+
+<button onclick="irrigationOptimizer()">
+Optimize Irrigation
+</button>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="card">
+
+<h3>9. 🌦️ AI Weather & Crop Alerts</h3>
+
+<p>
+Use your location to get current weather information
+and farming-related alerts.
+</p>
+
+<button onclick="getWeather()">
+Check Weather
+</button>
+
+<div id="weatherResult" class="result"></div>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="card">
+
+<h3>10. 🐛 AI Pest Early-Warning System</h3>
+
+<p>
+Identify potential pest risks based on crop and
+weather conditions.
+</p>
+
+<button onclick="pestWarning()">
+Check Pest Risk
+</button>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="card">
+
+<h3>11. 🔄 AI Crop Rotation Planner</h3>
+
+<p>
+Get simple crop rotation suggestions based on
+the previous crop.
+</p>
+
+<button onclick="cropRotation()">
+Plan Crop Rotation
+</button>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="card">
+
+<h3>12. 🌾 AI Harvest Prediction</h3>
+
+<p>
+Estimate approximate harvest readiness using
+crop and growing-period information.
+</p>
+
+<button onclick="harvestPrediction()">
+Predict Harvest
+</button>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="card">
+
+<h3>13. 📊 AI Farm Record Management</h3>
+
+<p>
+Track crop expenses, yield, income and farm profit.
+</p>
+
+<button onclick="farmRecords()">
+Open Farm Records
+</button>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="card">
+
+<h3>14. ⭐ Dharanika Trust Score</h3>
+
+<p>
+A future reliability score based on seller
+verification and customer feedback.
+</p>
+
+<button onclick="trustScore()">
+Check Trust Score
+</button>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="card">
+
+<h3>15. 🧬 Farm Memory / Digital Farm Profile</h3>
+
+<p>
+Store farm history to provide more personalised
+recommendations in future versions.
+</p>
+
+<button onclick="farmMemory()">
+Create Farm Profile
+</button>
+
+</div>
+
 
 </div>
 
 </section>
 
+
+<!-- TOOLS -->
 
 <section id="tools">
 
 <div class="section-title">
 
-<h2>🌱 Smart Farming Tools</h2>
+<h2>🧮 Farming Tools</h2>
 
-<p>
-Simple tools for smarter and sustainable farming.
-</p>
+<p>Simple calculators for farmers</p>
 
 </div>
 
 
 <div class="tool">
 
-<h2>🤖 AI Crop Doctor</h2>
+<h3>💰 Farm Profit Calculator</h3>
 
-<p>Select your crop and describe the problem.</p>
+<input id="investment"
+type="number"
+placeholder="Investment / Expenses">
 
-<select id="cropDoctorSelect">
+<input id="income"
+type="number"
+placeholder="Expected Income">
 
-<option value="">Select Crop</option>
-<option value="Rice / వరి">Rice / వరి</option>
-<option value="Cotton / పత్తి">Cotton / పత్తి</option>
-<option value="Chilli / మిరప">Chilli / మిరప</option>
-<option value="Tomato / టమాట">Tomato / టమాట</option>
-<option value="Groundnut / వేరుశెనగ">Groundnut / వేరుశెనగ</option>
-
-</select>
-
-<input
-id="cropProblem"
-placeholder="Example: ఆకులు పసుపుగా మారుతున్నాయి">
-
-<button class="action" onclick="cropDoctor()">
-🔍 Check Problem
-</button>
-
-<div id="doctorResult" class="result">
-Crop problem information will appear here.
-</div>
-
-</div>
-
-
-<div class="tool">
-
-<h2>🌦️ Live Weather</h2>
-
-<p>
-Get current weather using your location.
-</p>
-
-<button class="action" onclick="getWeather()">
-📍 Get My Weather
-</button>
-
-<div id="weatherResult" class="weather-box">
-Weather information will appear here.
-</div>
-
-</div>
-
-
-<div class="tool">
-
-<h2>🌾 Crop Guide</h2>
-
-<select id="cropGuideSelect">
-
-<option value="">Select Crop</option>
-<option value="rice">Rice / వరి</option>
-<option value="cotton">Cotton / పత్తి</option>
-<option value="chilli">Chilli / మిరప</option>
-<option value="tomato">Tomato / టమాట</option>
-<option value="groundnut">Groundnut / వేరుశెనగ</option>
-
-</select>
-
-<button class="action" onclick="cropGuide()">
-🌱 Show Guide
-</button>
-
-<div id="cropGuideResult" class="result">
-Crop information will appear here.
-</div>
-
-</div>
-
-
-<div class="tool">
-
-<h2>🐛 Pest & Disease Guide</h2>
-
-<select id="diseaseSelect">
-
-<option value="">Select Problem</option>
-<option value="aphids">Aphids</option>
-<option value="whitefly">Whiteflies</option>
-<option value="leafspot">Leaf Spot</option>
-<option value="yellow">Yellow Leaves</option>
-
-</select>
-
-<button class="action" onclick="diseaseGuide()">
-🔎 Check Guide
-</button>
-
-<div id="diseaseResult" class="result">
-Pest and disease information will appear here.
-</div>
-
-</div>
-
-
-<div class="tool">
-
-<h2>💰 Market Information</h2>
-
-<p>
-Useful guidance for crop selling and market planning.
-</p>
-
-<button class="action" onclick="marketGuide()">
-📊 Market Guide
-</button>
-
-<div id="marketResult" class="result">
-Market guidance will appear here.
-</div>
-
-</div>
-
-
-<div class="tool">
-
-<h2>🏛️ Government Schemes</h2>
-
-<p>
-Agriculture-related government support information.
-</p>
-
-<button class="action" onclick="showSchemes()">
-📋 View Schemes
-</button>
-
-<div id="schemeResult" class="result">
-Scheme information will appear here.
-</div>
-
-</div>
-
-</section>
-
-
-<section class="features" id="guides">
-
-<div class="section-title">
-
-<h2>📚 Farming Knowledge</h2>
-
-<p>
-Learn practical organic farming basics.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-<div class="icon">🌱</div>
-<h3>Organic Farming</h3>
-<p>
-Learn about natural farming, composting and soil health.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">💧</div>
-<h3>Water Management</h3>
-<p>
-Use water efficiently and plan irrigation according to crop needs.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🌍</div>
-<h3>Soil Health</h3>
-<p>
-Healthy soil supports healthy crops.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🐝</div>
-<h3>Natural Pest Control</h3>
-<p>
-Learn about preventive and natural pest management.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="section-title">
-
-<h2>🧮 Farming Calculators</h2>
-
-<p>
-Simple calculations for farm planning.
-</p>
-
-</div>
-
-
-<div class="tool">
-
-<h2>💰 Profit Calculator</h2>
-
-<input id="area" type="number" placeholder="Land area">
-
-<input id="yield" type="number" placeholder="Yield per area">
-
-<input id="price" type="number" placeholder="Price per unit">
-
-<input id="cost" type="number" placeholder="Total farming cost">
-
-<button class="action" onclick="calculateProfit()">
+<button onclick="calculateProfit()">
 Calculate Profit
 </button>
 
@@ -597,14 +593,18 @@ Calculate Profit
 
 <div class="tool">
 
-<h2>🌱 Seed Calculator</h2>
+<h3>🌱 Seed Calculator</h3>
 
-<input id="seedArea" type="number" placeholder="Land area">
+<input id="area"
+type="number"
+placeholder="Farm area in acres">
 
-<input id="seedRate" type="number" placeholder="Seed required per area">
+<input id="seedRate"
+type="number"
+placeholder="Seed requirement per acre (kg)">
 
-<button class="action" onclick="calculateSeed()">
-Calculate Seeds
+<button onclick="calculateSeed()">
+Calculate Seed
 </button>
 
 <div id="seedResult" class="result"></div>
@@ -614,13 +614,17 @@ Calculate Seeds
 
 <div class="tool">
 
-<h2>💧 Water Calculator</h2>
+<h3>💧 Water Calculator</h3>
 
-<input id="waterArea" type="number" placeholder="Land area">
+<input id="waterArea"
+type="number"
+placeholder="Farm area in acres">
 
-<input id="waterRate" type="number" placeholder="Water requirement per area">
+<input id="waterPerAcre"
+type="number"
+placeholder="Water requirement per acre">
 
-<button class="action" onclick="calculateWater()">
+<button onclick="calculateWater()">
 Calculate Water
 </button>
 
@@ -631,15 +635,14 @@ Calculate Water
 
 <div class="tool">
 
-<h2>🌍 Soil pH Guide</h2>
+<h3>🌍 Soil pH Guide</h3>
 
-<input
-id="phValue"
+<input id="ph"
 type="number"
 step="0.1"
 placeholder="Enter soil pH">
 
-<button class="action" onclick="checkPH()">
+<button onclick="checkPH()">
 Check Soil pH
 </button>
 
@@ -650,47 +653,40 @@ Check Soil pH
 </section>
 
 
-<section class="features">
-
-<div class="section-title">
-
-<h2>📷 Crop Image Check</h2>
-
-<p>
-Upload a crop image for preview.
-</p>
-
-</div>
-
-<div class="upload">
-
-<input
-type="file"
-accept="image/*"
-onchange="previewCrop(event)">
-
-<img id="cropPreview">
-
-<p>
-Image preview is available in this MVP.
-</p>
-
-</div>
-
-</section>
-
+<!-- ABOUT -->
 
 <section id="about">
 
 <div class="section-title">
 
-<h2>🌿 About Dharanika</h2>
+<h2>🌱 About Dharanika</h2>
 
 <p>
-Dharanika aims to make modern farming knowledge
+Dharanika aims to make intelligent organic farming
 simple, accessible and farmer-friendly.
-Voice-first interaction helps users ask questions
-naturally in their own language.
+</p>
+
+</div>
+
+<div class="tool">
+
+<h3>🌾 Our Vision</h3>
+
+<p>
+From understanding soil to selecting crops,
+protecting plants, managing water, predicting harvest
+and reaching markets — Dharanika brings the farming
+journey together in one simple platform.
+</p>
+
+<br>
+
+<h3>🎯 Mission</h3>
+
+<p>
+Make technology easier for farmers through
+simple interfaces, local-language assistance and
+voice-first interaction.
 </p>
 
 </div>
@@ -700,14 +696,23 @@ naturally in their own language.
 
 <footer>
 
-© 2026 Dharanika | AI-Powered Organic Farming
+<h3>🌱 Dharanika</h3>
+
+<p>AI-Powered Organic Farming</p>
+
+<p>Grow Naturally. Farm Smarter.</p>
+
+<p>© 2026 Dharanika</p>
 
 </footer>
 
 
+
 <script>
 
-/* VOICE */
+/* =========================
+VOICE ASSISTANT
+========================= */
 
 function startVoice(){
 
@@ -717,71 +722,50 @@ window.webkitSpeechRecognition;
 
 if(!SpeechRecognition){
 
-alert(
-"Voice recognition is not supported here. Please try Google Chrome."
-);
+alert("Voice recognition is not supported in this browser. Try Chrome.");
 
 return;
 }
 
 const recognition = new SpeechRecognition();
 
-recognition.lang="te-IN";
-recognition.continuous=false;
-recognition.interimResults=false;
+recognition.lang = "te-IN";
 
-recognition.onstart=function(){
+recognition.start();
 
-alert("🎙️ మాట్లాడండి... Dharanika వింటోంది!");
+document.getElementById("voiceStatus").innerText =
+"🎙️ Dharanika is listening...";
 
-};
-
-recognition.onresult=function(event){
+recognition.onresult = function(event){
 
 const text =
 event.results[0][0].transcript;
 
-alert("మీరు చెప్పారు:\n"+text);
+document.getElementById("voiceResult").style.display="block";
 
-speakAnswer(text);
+document.getElementById("voiceResult").innerHTML =
+"<b>You said:</b> " + text +
+"<br><br><b>Dharanika:</b> మీ పంట గురించి అడిగిన ప్రశ్నను అర్థం చేసుకోవడానికి ప్రయత్నిస్తున్నాను. Crop name, soil లేదా pest గురించి అడగండి.";
 
-};
-
-recognition.onerror=function(){
-
-alert("Voice input failed. Please try again.");
+speak("మీ పంట గురించి అడిగిన ప్రశ్నను అర్థం చేసుకోవడానికి ప్రయత్నిస్తున్నాను.");
 
 };
 
-recognition.start();
+recognition.onerror = function(){
+
+document.getElementById("voiceStatus").innerText =
+"Voice recognition failed. Please try again.";
+
+};
 
 }
 
 
-/* VOICE ANSWER */
+function speak(text){
 
-function speakAnswer(text){
+if("speechSynthesis" in window){
 
-if(!("speechSynthesis" in window)){
-return;
-}
-
-let answer =
-"మీ farming question అందింది. Dharanika tools ఉపయోగించండి.";
-
-if(
-text.includes("వర్షం") ||
-text.includes("weather") ||
-text.includes("వాతావరణం")
-){
-
-answer =
-"Live Weather లో Get My Weather button నొక్కండి.";
-
-}
-
-const speech =
-new SpeechSynthesisUtterance(answer);
+const speech = new SpeechSynthesisUtterance(text);
 
 speech.lang="te-IN";
 
@@ -789,147 +773,190 @@ speechSynthesis.speak(speech);
 
 }
 
+}
 
-/* CROP DOCTOR */
 
-function cropDoctor(){
+/* =========================
+FEATURE FUNCTIONS
+========================= */
 
-const crop =
-document.getElementById("cropDoctorSelect").value;
+function cropAdvisor(){
 
-const problem =
-document.getElementById("cropProblem").value;
+let soil =
+prompt("Enter soil type: Black / Red / Sandy");
 
-if(!crop || !problem){
+if(!soil) return;
 
-alert("Please select crop and describe the problem.");
+let answer;
 
-return;
+if(soil.toLowerCase().includes("black")){
+
+answer="Black soil: Cotton, soybean, maize and pulses can be suitable depending on season and water.";
+
+}else if(soil.toLowerCase().includes("red")){
+
+answer="Red soil: Groundnut, millets, pulses and some vegetables can be considered with suitable nutrient management.";
+
+}else{
+
+answer="Sandy soil: Groundnut, watermelon and some vegetables may be considered with proper irrigation and organic matter.";
 
 }
 
-let advice =
-"Check soil moisture, irrigation, nutrients and pest symptoms carefully.";
-
-if(
-problem.includes("పసుపు") ||
-problem.toLowerCase().includes("yellow")
-){
-
-advice =
-"Yellow leaves can have different causes such as water stress, nutrient deficiency or disease. Check soil moisture and leaf symptoms.";
-
-}
-
-if(
-problem.includes("పురుగు") ||
-problem.toLowerCase().includes("pest")
-){
-
-advice =
-"Inspect leaves and stems carefully for insects. Monitor the crop and use suitable integrated pest management.";
-
-}
-
-document.getElementById("doctorResult").innerHTML=
-
-"<b>🌿 Crop:</b> "+crop+
-"<br><b>🔎 Problem:</b> "+problem+
-"<br><br><b>💡 Guidance:</b> "+advice;
+alert("🌱 Crop Advisor\n\n"+answer);
 
 }
 
 
-/* CROP GUIDE */
+function decisionSimulator(){
 
-function cropGuide(){
+let budget =
+prompt("Enter your farming budget ₹");
 
-const crop =
-document.getElementById("cropGuideSelect").value;
+if(!budget) return;
 
-if(!crop){
+let crop =
+prompt("Enter crop name");
 
-alert("Please select a crop.");
+if(!crop) return;
 
-return;
-
-}
-
-const data={
-
-rice:
-"🌾 Rice: Proper water management, healthy soil and regular pest monitoring are important.",
-
-cotton:
-"🌿 Cotton: Good drainage, balanced nutrients and regular pest monitoring are important.",
-
-chilli:
-"🌶️ Chilli: Good drainage, proper irrigation and disease monitoring are important.",
-
-tomato:
-"🍅 Tomato: Good sunlight, balanced watering and regular disease inspection are important.",
-
-groundnut:
-"🥜 Groundnut: Loose soil, proper moisture and weed management are important."
-
-};
-
-document.getElementById("cropGuideResult").innerHTML=
-data[crop];
+alert(
+"🧠 Farm Decision Simulator\n\n"+
+"Crop: "+crop+
+"\nBudget: ₹"+budget+
+"\n\nSimulation created.\n\nFor a real AI simulation, weather, soil, market and historical farm data can be connected in the next version."
+);
 
 }
 
 
-/* DISEASE */
+function scanPlant(event){
 
-function diseaseGuide(){
+const file = event.target.files[0];
 
-const problem =
-document.getElementById("diseaseSelect").value;
+if(!file) return;
 
-if(!problem){
+const result =
+document.getElementById("plantResult");
 
-alert("Please select a problem.");
-
-return;
-
-}
-
-const data={
-
-aphids:
-"Aphids are small sap-sucking insects. Monitor new leaves and use integrated pest management.",
-
-whitefly:
-"Whiteflies can affect plant growth. Check the underside of leaves and maintain field hygiene.",
-
-leafspot:
-"Leaf spot can have fungal or bacterial causes. Avoid unnecessary leaf wetness and remove severely affected plant material.",
-
-yellow:
-"Yellow leaves may be caused by water stress, nutrient deficiency or disease. Check soil and roots before treatment."
-
-};
-
-document.getElementById("diseaseResult").innerHTML=
-data[problem];
+result.innerHTML =
+"🌿 Image uploaded successfully.<br><br>"+
+"Possible analysis areas:<br>"+
+"• Leaf disease<br>"+
+"• Pest damage<br>"+
+"• Nutrient deficiency<br>"+
+"• Organic treatment suggestions<br><br>"+
+"⚠️ Real AI image diagnosis requires an AI vision backend.";
 
 }
 
 
-/* LIVE WEATHER */
+function soilPlanner(){
+
+let ph =
+prompt("Enter soil pH");
+
+if(!ph) return;
+
+alert(
+"🌍 Soil Planner\n\n"+
+"pH: "+ph+
+"\n\nSuggested plan:\n"+
+"• Add suitable organic matter\n"+
+"• Use compost/vermicompost based on soil condition\n"+
+"• Consider crop rotation\n"+
+"• Re-test soil periodically"
+);
+
+}
+
+
+function marketIntelligence(){
+
+alert(
+"📈 Market Intelligence\n\n"+
+"Market dashboard can provide:\n"+
+"• Market prices\n"+
+"• Price trends\n"+
+"• Demand information\n"+
+"• Selling-time insights\n\n"+
+"Live market prices require a verified market-data API."
+);
+
+}
+
+
+function marketplace(){
+
+alert(
+"🛒 Farmer Marketplace\n\n"+
+"Farmers can list:\n"+
+"• Organic vegetables\n"+
+"• Fruits\n"+
+"• Grains\n"+
+"• Seeds\n"+
+"• Other farm products\n\n"+
+"Direct farmer-to-customer selling can be connected in the next version."
+);
+
+}
+
+
+function farmingAssistant(){
+
+let question =
+prompt("Ask your farming question:");
+
+if(!question) return;
+
+alert(
+"🤖 Dharanika Farming Assistant\n\n"+
+"You asked:\n"+question+
+"\n\nFor the MVP, this is a demo assistant. A real AI model can be connected through a secure backend."
+);
+
+}
+
+
+function irrigationOptimizer(){
+
+let area =
+prompt("Enter farm area in acres:");
+
+if(!area) return;
+
+let water =
+prompt("Enter approximate water requirement per acre:");
+
+if(!water) return;
+
+let total =
+Number(area)*Number(water);
+
+alert(
+"💧 Irrigation Optimizer\n\n"+
+"Total estimated water requirement: "+
+total+
+" units\n\n"+
+"Actual requirement depends on crop, soil, weather and irrigation method."
+);
+
+}
+
 
 function getWeather(){
 
 const result =
 document.getElementById("weatherResult");
 
-result.innerHTML=
-"📍 Getting your location...";
+result.style.display="block";
+
+result.innerHTML =
+"🌦️ Getting your location and weather...";
 
 if(!navigator.geolocation){
 
-result.innerHTML=
+result.innerHTML =
 "Location is not supported by this browser.";
 
 return;
@@ -938,7 +965,7 @@ return;
 
 navigator.geolocation.getCurrentPosition(
 
-function(position){
+async function(position){
 
 const lat =
 position.coords.latitude;
@@ -946,52 +973,50 @@ position.coords.latitude;
 const lon =
 position.coords.longitude;
 
-const url=
-"https://api.open-meteo.com/v1/forecast"+
-"?latitude="+lat+
-"&longitude="+lon+
-"&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code"+
-"&timezone=auto";
+try{
 
-fetch(url)
+const url =
+"https://api.open-meteo.com/v1/forecast?latitude="+
+lat+
+"&longitude="+
+lon+
+"&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=auto";
 
-.then(response=>response.json())
+const response =
+await fetch(url);
 
-.then(data=>{
+const data =
+await response.json();
 
-const current=data.current;
+const current =
+data.current;
 
-result.innerHTML=
-
+result.innerHTML =
+"🌦️ <b>Current Weather</b><br><br>"+
 "🌡️ Temperature: "+
 current.temperature_2m+
 " °C<br>"+
-
 "💧 Humidity: "+
 current.relative_humidity_2m+
 " %<br>"+
-
-"💨 Wind Speed: "+
+"💨 Wind: "+
 current.wind_speed_10m+
 " km/h<br><br>"+
+"Weather-based farming decisions can be added here.";
 
-"🌦️ Current weather data loaded.";
+}catch(error){
 
-})
+result.innerHTML =
+"Unable to load weather right now.";
 
-.catch(function(){
-
-result.innerHTML=
-"Unable to load weather. Please check your internet connection.";
-
-});
+}
 
 },
 
 function(){
 
-result.innerHTML=
-"📍 Please allow location permission to get local weather.";
+result.innerHTML =
+"Location permission was not granted.";
 
 }
 
@@ -1000,198 +1025,253 @@ result.innerHTML=
 }
 
 
-/* MARKET */
+function pestWarning(){
 
-function marketGuide(){
+let crop =
+prompt("Enter crop name:");
 
-document.getElementById("marketResult").innerHTML=
+if(!crop) return;
 
-"💰 Before selling, compare prices from nearby markets, check crop quality and consider transport costs.<br><br>"+
-"⚠️ Live market prices are not connected in this MVP.";
-
-}
-
-
-/* SCHEMES */
-
-function showSchemes(){
-
-document.getElementById("schemeResult").innerHTML=
-
-"🏛️ Agriculture support can include crop insurance, farmer support, irrigation assistance and soil-health services.<br><br>"+
-"⚠️ Always verify current eligibility and application details through official government sources.";
+alert(
+"🐛 Pest Early Warning\n\n"+
+"Crop: "+crop+
+"\n\nPotential risk monitoring includes:\n"+
+"• Weather conditions\n"+
+"• Crop stage\n"+
+"• Humidity\n"+
+"• Previous pest reports\n\n"+
+"Real predictive alerts require historical and live agricultural data."
+);
 
 }
 
 
-/* PROFIT */
+function cropRotation(){
+
+let previous =
+prompt("What crop was grown previously?");
+
+if(!previous) return;
+
+alert(
+"🔄 Crop Rotation Planner\n\n"+
+"Previous crop: "+previous+
+"\n\nSuggested approach:\n"+
+"Rotate with a crop from a different plant family and consider legumes where appropriate to support soil health."
+);
+
+}
+
+
+function harvestPrediction(){
+
+let crop =
+prompt("Enter crop name:");
+
+if(!crop) return;
+
+let days =
+prompt("How many days has the crop been growing?");
+
+if(!days) return;
+
+alert(
+"🌾 Harvest Prediction\n\n"+
+"Crop: "+crop+
+"\nGrowing period: "+days+" days"+
+"\n\nThis is an MVP estimate interface. Accurate harvest prediction can use crop variety, weather, soil and historical data."
+);
+
+}
+
+
+function farmRecords(){
+
+let crop =
+prompt("Enter crop name:");
+
+if(!crop) return;
+
+let expense =
+prompt("Enter expenses ₹:");
+
+let income =
+prompt("Enter income ₹:");
+
+if(expense && income){
+
+let profit =
+Number(income)-Number(expense);
+
+alert(
+"📊 Farm Record\n\n"+
+"Crop: "+crop+
+"\nExpenses: ₹"+expense+
+"\nIncome: ₹"+income+
+"\nProfit: ₹"+profit
+);
+
+}
+
+}
+
+
+function trustScore(){
+
+alert(
+"⭐ Dharanika Trust Score\n\n"+
+"Example factors:\n"+
+"✓ Seller verification\n"+
+"✓ Product information\n"+
+"✓ Customer feedback\n"+
+"✓ Transaction history\n\n"+
+"Trust scoring can be implemented when the marketplace backend is connected."
+);
+
+}
+
+
+function farmMemory(){
+
+let farmer =
+prompt("Enter farmer/farm name:");
+
+if(!farmer) return;
+
+localStorage.setItem(
+"dharanikaFarm",
+farmer
+);
+
+alert(
+"🧬 Farm Profile Saved!\n\n"+
+"Farm: "+farmer+
+"\n\nFarm history can be stored and used for personalised recommendations."
+);
+
+}
+
+
+/* =========================
+CALCULATORS
+========================= */
 
 function calculateProfit(){
 
-const area=
-Number(document.getElementById("area").value);
+let investment =
+Number(document.getElementById("investment").value);
 
-const yieldValue=
-Number(document.getElementById("yield").value);
+let income =
+Number(document.getElementById("income").value);
 
-const price=
-Number(document.getElementById("price").value);
+let profit =
+income-investment;
 
-const cost=
-Number(document.getElementById("cost").value);
+let result =
+document.getElementById("profitResult");
 
-if(!area || !yieldValue || !price){
+result.style.display="block";
 
-alert("Please enter the required values.");
-
-return;
-
-}
-
-const revenue=
-area*yieldValue*price;
-
-const profit=
-revenue-cost;
-
-document.getElementById("profitResult").innerHTML=
-
-"💵 Estimated Revenue: ₹"+
-revenue.toFixed(2)+
-"<br>💰 Estimated Profit: ₹"+
-profit.toFixed(2);
+result.innerHTML =
+"💰 Estimated Profit: ₹"+profit;
 
 }
 
-
-/* SEED */
 
 function calculateSeed(){
 
-const area=
-Number(document.getElementById("seedArea").value);
+let area =
+Number(document.getElementById("area").value);
 
-const rate=
+let rate =
 Number(document.getElementById("seedRate").value);
 
-if(!area || !rate){
-
-alert("Please enter area and seed rate.");
-
-return;
-
-}
-
-const total=
+let total =
 area*rate;
 
-document.getElementById("seedResult").innerHTML=
+let result =
+document.getElementById("seedResult");
 
-"🌱 Estimated seed requirement: "+
-total.toFixed(2)+
-" units.";
+result.style.display="block";
+
+result.innerHTML =
+"🌱 Required Seed: "+
+total+
+" kg";
 
 }
 
-
-/* WATER */
 
 function calculateWater(){
 
-const area=
+let area =
 Number(document.getElementById("waterArea").value);
 
-const rate=
-Number(document.getElementById("waterRate").value);
+let water =
+Number(document.getElementById("waterPerAcre").value);
 
-if(!area || !rate){
+let total =
+area*water;
 
-alert("Please enter area and water rate.");
+let result =
+document.getElementById("waterResult");
 
-return;
+result.style.display="block";
 
-}
-
-const total=
-area*rate;
-
-document.getElementById("waterResult").innerHTML=
-
-"💧 Estimated water requirement: "+
-total.toFixed(2)+
-" units.";
+result.innerHTML =
+"💧 Estimated Water Requirement: "+
+total+
+" units";
 
 }
 
-
-/* SOIL PH */
 
 function checkPH(){
 
-const ph=
-Number(document.getElementById("phValue").value);
-
-if(!ph){
-
-alert("Please enter soil pH.");
-
-return;
-
-}
+let ph =
+Number(document.getElementById("ph").value);
 
 let message;
 
 if(ph<5.5){
 
-message=
-"Soil is strongly acidic. Consider professional soil testing before applying amendments.";
+message="Soil is strongly acidic. Soil testing and suitable amendments may be required.";
 
-}
-else if(ph<6.5){
+}else if(ph<7){
 
-message=
-"Soil is moderately acidic. Many crops can grow well depending on crop requirements.";
+message="Soil is acidic to near-neutral.";
 
-}
-else if(ph<=7.5){
+}else if(ph<=7.5){
 
-message=
-"Soil pH is around neutral, which is suitable for many crops.";
+message="Soil is around neutral to slightly alkaline.";
 
-}
-else{
+}else{
 
-message=
-"Soil is alkaline. Check crop-specific requirements and soil-test guidance.";
+message="Soil is alkaline. Consider soil-test-based management.";
 
 }
 
-document.getElementById("phResult").innerHTML=
+let result =
+document.getElementById("phResult");
 
-"🌍 pH: "+ph+
-"<br>"+message;
+result.style.display="block";
+
+result.innerHTML =
+"🌍 "+message;
 
 }
 
 
-/* IMAGE PREVIEW */
+/* =========================
+NAVIGATION
+========================= */
 
-function previewCrop(event){
+function scrollToFeatures(){
 
-const file=
-event.target.files[0];
-
-if(!file){
-return;
-}
-
-const preview=
-document.getElementById("cropPreview");
-
-preview.src=
-URL.createObjectURL(file);
-
-preview.style.display="block";
+document.getElementById("features")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
